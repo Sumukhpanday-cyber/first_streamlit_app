@@ -17,7 +17,9 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display the table on the page.
 
 streamlit.dataframe(fruits_to_show)
+streamlit.stop()
 import snowflake.connector
+from urllib.error import URLError
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("insert  into fruit_load_list values('from  streamlit')")
