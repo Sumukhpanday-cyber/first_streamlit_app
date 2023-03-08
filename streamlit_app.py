@@ -46,6 +46,7 @@ except URLError as e :
   streamlit.header('Fruityvice fruitvice Advice!')
   try:
      fruit_choice=streamlit.text_input('What fruit would you like information that')
+  except URLError as e :
     
   
   
