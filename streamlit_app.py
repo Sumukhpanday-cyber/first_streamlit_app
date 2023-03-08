@@ -42,6 +42,11 @@ except URLError as e :
       fruityvice_normalized=pandas.json_normalize(fruityvice_response.json())
       return fruityvice_normalized
     
+  #New Section to display fruitvice api response
+  streamlit.header('Fruityvice fruitvice Advice!')
+  try:
+     fruit_choice=streamlit.text_input('What fruit would you like information that')
+    
   
   
 
